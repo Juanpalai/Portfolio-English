@@ -1,19 +1,29 @@
-html {
-  background-color: #1A1A1A;
+html{
+ background-color: #1A1A1A;
   filter: invert(100%);
   margin: 0em;
   font-family: "Arial", sans-serif;
   height: 150%;
 }
 body {
-  min-height: 100%;
+    min-height: 100%;
 }
 
+h2
+{
+  font-family: "Arial", sans-serif;
+  font-size:  200%;
+}
+
+.presentation
+{
+  background-color: #D3CECE;
+}
 .img {
   filter: invert(100%);
 }
 
-.cover {
+.cover {  
   filter: invert(100%);
   height: 400px;
   color: white;
@@ -22,34 +32,22 @@ body {
   background-position: center;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
+  
 }
 
-.textjp {
-  font-family: "Arial";
+.scale-down {
+  object-fit: scale-down;
 }
 
-.row {
+.row{
+  
   margin-top: 30px;
 }
 
 .cover-small {
+  
   height: 200px;
   background-blend-mode: normal;
-}
-
-.cover-small-popup {
-  height: 330px;
-  margin-left: 125px;
-  width: 330px;
-  background-blend-mode: normal;
-  background-size: cover;
-}
-
-.cover-small-popupMG {
-  height: 320px;
-  background-blend-mode: normal;
-  background-size: cover;
-  background-position: top;
 }
 
 .card {
@@ -64,215 +62,132 @@ body {
 }
 
 .card-text {
-  min-height: 5rem;
+  min-height: 4rem;
 }
 
+.zoom
+{
+  cursor: zoon ;
+  transition: transform .3s;
+}
+.zoom:hover
+{
+  transform: scale(1.5);
+  
+}
+
+.zoom-in
+{
+  cursor: zoom-in;
+}
+.carousel-item img
+{
+  cursor: zoom-in;
+}
+
+.maxbotton
+{
+  transform: scale(1.5);
+}
 /* ------------------------- */
-/* POPUP */
+/* Lightbox*/
 /* ------------------------- */
 
-.overlay {
-  background: rgba(0, 0, 0, 0.3);
+#lightbox {
   position: fixed;
+  z-index: 1000;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  visibility: hidden;
-}
-
-.overlay.active {
-  visibility: visible;
-}
-
-.popup {
-  background: #F8F8F8;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-  font-family: "Arial", sans-serif;
-  padding: 20px;
-  text-align: start;
-  width: 600px;
-  height: 730px;
-}
-
-.popup .btn-cerrar-popup {
-  font-size: 16px;
-  line-height: 16px;
-  display: block;
-  text-align: right;
-  transition: 0.3s ease all;
-  color: #BBBBBB;
-}
-
-.popup .btn-cerrar-popup:hover {
-  color: #000;
-}
-
-.popup h3 {
-  margin-bottom: 10px;
-  opacity: 0;
-}
-
-.popup h4 {
-  font-size: 22px;
-  font-weight: 300;
-  margin-bottom: 40px;
-  opacity: 0;
-}
-
-.popup form .contenedor-inputs {
-  opacity: 0;
-}
-
-.popup form .contenedor-inputs input {
   width: 100%;
-  margin-bottom: 20px;
-  height: 52px;
-  font-size: 18px;
-  line-height: 52px;
-  text-align: center;
-  border: 1px solid #BBBBBB;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  cursor: zoom-out;
+  display: none;
 }
 
-.popup form .btn-submit {
-  padding: 0 20px;
-  height: 40px;
-  line-height: 40px;
-  border: none;
-  color: #fff;
-  background: #5E7DE3;
-  border-radius: 3px;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s ease all;
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.popup form .btn-submit:hover {
-  background: rgba(94, 125, 227, 0.9);
+#lightbox img {
+  filter: invert(100%);
+  max-width: 90%;
+  max-height: 80%;
+  padding: 4px;
+  background-color: black;
+  border: 2px solid white;
 }
 
-/* ------------------------- */
-/* ANIMATION */
-/* ------------------------- */
 
-.popup.active {
-  transform: scale(1);
-  opacity: 1;
-}
-.popup.active h3 {
-  animation: entradaTitulo 0.8s ease 0.5s forwards;
-}
-.popup.active h4 {
-  animation: entradaSubtitulo 0.8s ease 0.5s forwards;
-}
-.popup.active .contenedor-inputs {
-  animation: entradaInputs 1s linear 1s forwards;
-}
-
-@keyframes entradaTitulo {
-  from {
-    opacity: 0;
-    transform: translateY(-25px);
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes entradaSubtitulo {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes entradaInputs {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 /* ------------------------- */
 /* SOCIAL MEDIA*/
 /* ------------------------- */
 
+
 :root {
-  --color-linkedin: #3b5998;
-  --color-twitter: #55acee;
-  --color-instagram: #125688;
-  --color-youtube: #363636;
+    --color-linkedin: #3b5998;
+    --color-twitter: #55acee;
+    --color-instagram: #125688;
+    --color-youtube: #363636;
 }
 
 .icons-container {
-  display: flex;
+    display: flex;
 }
 
 .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35px;
-  height: 35px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 50%;
-  transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all .3s;
 }
 
 .icon:hover {
-  transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 .icon:not(:first-child) {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 .icon--linkedin {
-  background-color: var(--color-linkedin);
+    background-color: var(--color-linkedin);
 }
 
 .icon--facebook:hover {
-  color: var(--color-facebook);
-  background-color: #fff;
+    color: var(--color-facebook);
+    background-color: #fff;
 }
 
 .icon--twitter {
-  background-color: var(--color-twitter);
+    background-color: var(--color-twitter);
 }
 
 .icon--twitter:hover {
-  color: var(--color-twitter);
-  background-color: #fff;
+    color: var(--color-twitter);
+    background-color: #fff;
 }
 
 .icon--youtube {
-  background-color: var(--color-youtube);
+    background-color: var(--color-youtube);
 }
 
 .icon--youtube:hover {
-  color: var(--color-youtube);
-  background-color: #fff;
+    color: var(--color-youtube);
+    background-color: #fff;
 }
 
 .icon--instagram {
-  background-color: var(--color-instagram);
+    background-color: var(--color-instagram);
 }
 
 .icon--instagram:hover {
-  color: var(--color-instagram);
-  background-color: #fff;
+    color: var(--color-instagram);
+    background-color: #fff;
 }

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lagos's Portfolio!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <linkhref="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+    rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    />
+    <script defer src="popup.js"></script>
+  </head>
+  <body>
+    <section class=" presentation">
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <ul class="nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active zoom"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link zoom" href="profile.html">About me</a>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="cover d-flex justify-content-center align-items-center flex-column p-5"
+          style="background-image:url(https://cdn.glitch.me/4cca95d7-5082-4e5c-8e1f-aea9cec38165/BookTower.jpg?v=1639795323654)"
+        ></div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-subheading  ">
+              Book Towers
+            </h2>
+          </div>
+        </div>
+      </header>
+
+      <!-- introduction  -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h5>
+              <p>
+                A 3D strategy game developed in Unity. The player plays against
+                the machine, the player has mana that is granted every so often
+                with which he can summon different creatures, the goal is to
+                summon the creatures carefully to defend your tower while trying
+                to destroy your enemy's tower.
+              </p>
+            </h5>
+          </div>
+          <div class="col-lg-6">
+            <h5>
+              <p>
+                所属: 東京コミュニケーションアート専門学校<br />
+                ジャンル: タワーディフェンスゲーム<br />
+                プラットフォーム: WindowsPC <br />開発環境: Unity
+                <br />使用言語: C# <br />制作期間: 2021年6月～2021年11月<br />チーム人数:
+                プログラマー4人、グラフィッカー3人、プランナー1人<br />
+              </p>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ■アピールポイント-->
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h3 class="section-subheading ">
+          制作担当箇所
+        </h3>
+      </div>
+    </div>
+
+    <!-- 撃効果音-->
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h4 class="section-subheading textjp">
+            撃効果音
+          </h4>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class=" col-lg-6 ">
+          <img
+            src="https://cdn.glitch.me/4cca95d7-5082-4e5c-8e1f-aea9cec38165/atacksong.jpg?v=1639836303956"
+            height="350px"
+            class="rounded  w-100 mx-auto d-block img zoom-in"
+          />
+        </div>
+        <div class="col-lg-6">
+          <p class="textjp">
+            プレイヤーキャラクターと敵キャラクターが出会って戦うときに、攻撃アニメーションを行うのですが、音が出ないので、プロジェクトマネージャーから攻撃時の効果音をプログラムするように言われ、正しくプログラムしたのですが、結局効果音は実装しないことにしました。
+            <br />
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- キャラクター移動-->
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h4 class="section-subheading textjp">
+            キャラクター移動
+          </h4>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="textjp">
+            プレイヤーキャラクターが敵のタワーに向かって進んでいくゲームなので、移動は必須でした。ゲームは、キャラクターが歩行アニメーションで一直線に歩き、敵と遭遇すると停止して攻撃アニメーションを実行するようにプログラムされています。
+            <br />
+          </p>
+        </div>
+        <div class=" col-lg-6">
+          <div
+            id="carouselExampleIndicators2"
+            class="carousel slide img"
+            data-bs-ride="carouse1"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators2"
+                data-bs-slide-to="0"
+                class="active "
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators2"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators2"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://cdn.glitch.me/4cca95d7-5082-4e5c-8e1f-aea9cec38165/movecode.jpg?v=1639836095794"
+                  height="350px"
+                  class="rounded  w-100 mx-auto d-block"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://cdn.glitch.me/4cca95d7-5082-4e5c-8e1f-aea9cec38165/autoattackcode.jpg?v=1639836122262"
+                  height="350px"
+                  class="d-block  mx-auto"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://cdn.glitch.me/4cca95d7-5082-4e5c-8e1f-aea9cec38165/animationcode.jpg?v=1639836148496"
+                  height="350px"
+                  class="d-block  mx-auto"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators2"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators2"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-grid col-1 mx-auto ">
+      <a
+        href="https://github.com/Tradocks/Book-Towers"
+        target="_blank "
+        type="submit"
+        class=" btn btn-primary  mb-5 maxbotton btn-lg "
+        >GitHub</a
+      >
+    </div>
+  </body>
+</html>
